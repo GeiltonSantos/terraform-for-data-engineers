@@ -207,9 +207,25 @@ name_bucket_script_glue_job = "scripts-for-glue"
 
 Agora na sua variável será injetado o valor "scripts-for-glue" automáticamente. Bacana, né?
 
+## Região Dinâmica
+
+
+
 ## Tags padrões com o locals
 
-Sabe aquelas tag's que padrões que são exigidas pela sua empresa para rastreio dos custos? Então, é possível torná-las padrão e referenciar de maneira fácil e rápida em todos os recursos que você está construindo.Com o locals
+Sabe aquelas tag's que padrões que são exigidas pela sua empresa para rastreio dos custos? Então, é possível torná-las padrão e referenciar de maneira fácil e rápida em todos os recursos que você está construindo.
+Com o [locals](https://developer.hashicorp.com/terraform/language/values/locals)
+
+É possível utilizar a função **merge** do terraform para mesclar _tags_ padrões com _tags_ específicas do recurso.
+
+```tf
+tags = merge(
+    local.tags,
+    {
+        Name = "tag-específica-do-recurso"
+    }
+)
+```
 
 ## Migrando o backend tfstate
 
