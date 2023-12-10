@@ -1,5 +1,5 @@
 resource "aws_glue_job" "terraform_for_data_engineer_glue_job" {
-  name     = "terraform_for_data_engineer"
+  name     = var.project_name
   role_arn = aws_iam_role.terraform_for_data_engineer_role.arn
 
   command {
@@ -11,6 +11,7 @@ resource "aws_glue_job" "terraform_for_data_engineer_glue_job" {
   worker_type       = "G.1X"
   number_of_workers = 3
   default_arguments = {
-    "key" = "value"
+    "--key" = "value"
   }
+  tags = local.tags
 }
