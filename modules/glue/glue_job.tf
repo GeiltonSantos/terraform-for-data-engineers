@@ -1,9 +1,9 @@
 resource "aws_glue_job" "terraform_for_data_engineer_glue_job" {
   name     = var.project_name
-  role_arn = aws_iam_role.terraform_for_data_engineer_role.arn
+  role_arn = var.arn_role
 
   command {
-    script_location = "s3://${aws_s3_bucket.terraform_for_data_engineer_s3.bucket}/terraform_for_data_engineer.py"
+    script_location = "s3://${var.nome_bucket}/${var.project_name}.py"
   }
   description       = "Job Teste Terraform for data engineer"
   glue_version      = "4.0"
@@ -13,5 +13,5 @@ resource "aws_glue_job" "terraform_for_data_engineer_glue_job" {
   default_arguments = {
     "--key" = "value"
   }
-  tags = local.tags
+  tags = var.tags
 }

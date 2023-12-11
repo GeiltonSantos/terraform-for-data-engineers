@@ -293,6 +293,8 @@ Para ter o output no seu terminal e ajudar no debug/visualização dos atributos
 Uma observação interessante é que o arquivo de configuração do(s) _provider(s)_ devem ficar na raiz do projeto.
 
  [Saiba mais lendo a documentação oficial](https://developer.hashicorp.com/terraform/language/modules/develop)
+
+ [Saiba mais sobre outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
 # Pre commit
 
 Imagine que ao submeter seu código para o repositório remoto e ao iniciar a _pipe_ por algum motivo a sua _pipe_ quebra e você percebe que cometeu algum erro de sintaxe ou esqueceu de fazer algum ajuste de lint. Logo, você vai ter que voltar no seu editor de texto e arrumar onde a _pipe_ reclamou.
@@ -418,12 +420,49 @@ Com as configurações de bucket e subida dos arquivos necessários juntamente c
 
 ### Glue Job
 
-### Glue Database
-
-### Glue Table
-
 ### Glue Workflow
 
 ### Glue Trigger
 
+### Glue Streaming
+
+### Glue Database
+
+### Glue Table
+
+## Lake Formation
+
+## EventBridge
+
+## StepFunction
+
+## Redshift
+
+## DynamoDB
+
+## RDS
+
 ## Lambda
+
+## Eventos
+
+## Airflow (MWAA)
+
+## Kinesis
+
+## Amazon MSK
+
+## DMS
+
+## SNS
+
+## SQS
+
+## ECS
+
+
+
+
+# TODOs:
+- Entender a diferença entre locals.tf e variables.tf
+- Entender a nomenclatura **data "aws_region" "current" {}**

@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "terraform_for_data_engineer_s3" {
   bucket = var.name_bucket_script_glue_job
 
-  tags = local.tags
+  tags = var.tags
 }
 
 resource "aws_s3_object" "upload_arquivos" {
