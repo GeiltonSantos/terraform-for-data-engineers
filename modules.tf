@@ -22,4 +22,5 @@ module "terraform_for_data_engineers_glue" {
   tags                        = local.tags
   nome_bucket                 = module.terraform_for_data_engineers_bucket.bucket_name
   arn_role                    = module.terraform_for_data_engineers_iam.arn_role
+  name_bucket_bronze_layer    = var.name_bucket_bronze_layer
 }

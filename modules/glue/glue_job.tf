@@ -15,3 +15,8 @@ resource "aws_glue_job" "terraform_for_data_engineer_glue_job" {
   }
   tags = var.tags
 }
+
+resource "aws_glue_catalog_database" "aws_glue_catalog_database" {
+  name = var.project_name
+  tags = var.tags
+}

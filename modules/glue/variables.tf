@@ -22,3 +22,8 @@ variable "arn_role" {
   type        = string
   description = "arn da role que sera assinada pelo glue para que o job consiga executar as tarefas"
 }
+
+variable "name_bucket_bronze_layer" {
+  type        = string
+  description = "Nome do bucket principal para alocar os recursos do job glue"
+}
