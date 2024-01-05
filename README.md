@@ -466,3 +466,4 @@ Com as configurações de bucket e subida dos arquivos necessários juntamente c
 # TODOs:
 - Entender a diferença entre locals.tf e variables.tf
 - Entender a nomenclatura **data "aws_region" "current" {}**
+- Entender o declarativo depends_on
